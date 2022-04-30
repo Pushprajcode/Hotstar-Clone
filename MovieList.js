@@ -1,113 +1,138 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    FlatList,
-    Image
-
-}  from 'react-native'
+import {View, Text, FlatList, Image,} from 'react-native';
 import Popular from './popular';
-const images=[
-    
-        {src:require('/Users/admin/Desktop/FoodDelivery/src/assets/images/RRR.jpeg')},
-    
-    {src:require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg')},
-    {src:require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg')},
-]
-const data=[
-    
-    {src:require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
+import Recomdes from './Home/Recomdes';
+import Newon from './Home/Newon';
+import Quixshows from './Home/Quickshows';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+const images = [
+  {
+    src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/RRR.jpeg'),
+  },
 
-{src:require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg')},
-{src:require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg')},
-{src:require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
-{src:require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
-{src:require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg')},
-]
-const  Movie=()=>{
-  const  renderItem=({item})=>{
-        return(
-        <View style={{backgroundColor:'black',padding:4, marginTop:15,}}>   
-            <Image source={item.src} 
-            style={{
-              width:300,
-              height:180,
-               // resizeMode:'contain',
-                borderRadius:7,
-                margin:0,
-                
-                
-            }}/></View> 
-        )
+  {
+    src: require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg'),
+  },
+  {
+    src: require('./src/assets/images/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg'),
+  },
+];
+const data = [
+  {src: require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
 
-    }
-    const  render=({item})=>{
-        return(
-        <View style={{backgroundColor:'black',padding:4, marginTop:15,}}>   
-            <Image source={item.src} 
-            style={{
-              width:125,
-              height:180,
-               // resizeMode:'contain',
-                borderRadius:7,
-                margin:0,
-                
-                
-            }}/></View> 
-        )
+  {
+    src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/rudra.jpg'),
+  },
+  {
+    src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/sundram.jpg'),
+  },
+  {src: require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
+  {src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/world.jpg')},
+ 
+];
+const Movie = () => {
+  const renderItem = ({item}) => {
+    return (
+      <View style={{backgroundColor: 'black', padding: 4, marginTop: 15}}>
+        <TouchableOpacity>
+        <Image
+          source={item.src}
+          style={{
+            width: 300,
+            height: 180,
+            // resizeMode:'contain',
+            borderRadius: 7,
+            margin:3,
+          }}
+        />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+  const render = ({item}) => {
+    return (
+      <View style={{backgroundColor: 'black', padding: 4, marginTop: 15}}>
+        <TouchableOpacity>
 
-    }
-    return(
-        <View >
-            <FlatList 
-            horizontal={true}
-            data={images}
-            bounces={false}
-            renderItem={renderItem}/>
-            <View>
-              <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Latest & Trending'}</Text>
-            </View>
-            <View>
-            <FlatList 
-            horizontal={true}
-            data={data}
-            bounces={false}
-            renderItem={render}/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-            <View>
-                <Text style={{color:'white',fontSize:20,fontWeight:'bold'}}>{'Popular Shows'}</Text>
-                <Popular/>
-            </View>
-
-        
-        </View>
-     
-
-      
-
-
-    )
-    
-
-}
+        <Image
+          source={item.src}
+          style={{
+            width: 125,
+            height: 180,
+            // resizeMode:'contain',
+            borderRadius: 7,
+            margin:5,
+            padding:20
+          }}
+        />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+  return (
+    <View>
+      <FlatList
+        horizontal={true}
+        data={images}
+        bounces={false}
+        renderItem={renderItem}
+      />
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginTop:5}}>
+          {'Latest & Trending'}
+        </Text>
+      </View>
+      <View>
+        <FlatList
+          horizontal={true}
+          data={data}
+          bounces={false}
+          renderItem={render}
+        />
+      </View>
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginBottom:7}}>
+          {'Popular Shows'}
+        </Text>
+        <Popular />
+      </View>
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginBottom:7}}>
+          {'Movies Recommended For You'}
+        </Text>
+        <Recomdes />
+      </View>
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginBottom:7}}>
+          {'New On Disney+ Hotstar'}
+        </Text>
+        <Newon/>
+      </View>
+      <View>
+        <Text
+          style={{
+            color: 'white',
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginBottom: 7,
+          }}>
+          {'Multiplex Movies'}
+        </Text>
+        <Popular />
+      </View>
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginBottom:4}}>
+          {'Popular Shows'}
+        </Text>
+        <Popular />
+      </View>
+      <View>
+        <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold',marginBottom:4}}>
+          {'Quix Shows'}
+        </Text>
+        <Quixshows />
+      </View>
+    </View>
+  );
+};
 export default Movie;

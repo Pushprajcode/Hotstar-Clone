@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 const data = [
   {src: require('../src/assets/images/cyclic.jpg')},
   {src: require('../src/assets/images/cotry.jpg')},
@@ -11,10 +17,9 @@ const SportList = () => {
   const renderItem = ({item}) => {
     return (
       <View>
-        <Image
-          source={item.src}
-          style={{height: 250, width: 400, borderRadius: 7}}
-        />
+        <TouchableOpacity>
+          <Image style={styles.image} source={item.src} />
+        </TouchableOpacity>
       </View>
     );
   };
@@ -25,4 +30,12 @@ const SportList = () => {
     </View>
   );
 };
+const styles = StyleSheet.create({
+  image: {
+    height: 170,
+    width: 350,
+    borderRadius: 7,
+    margin: 6,
+  },
+});
 export default SportList;

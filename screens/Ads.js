@@ -7,8 +7,8 @@ const Ads = () => {
         
 
   return (
-    <View style={{backgroundColor:'black'}}>
-    <Image  style={{height:130,width:'98%',marginTop:5,left:2,borderRadius:5}}
+    <View >
+    <Image  style={styles.image}
     source={require('../src/assets/images/ipl.jpeg')}/>
     </View>
   )
@@ -16,4 +16,9 @@ const Ads = () => {
 
 export default Ads
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    image:{
+        height:130,width:'98%',marginTop:5,left:2,borderRadius:5
+    }
+
+})

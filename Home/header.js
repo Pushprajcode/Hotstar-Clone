@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Text,
   View,
@@ -6,23 +6,36 @@ import {
   SafeAreaView,
   TouchableOpacity,
   StyleSheet,
+  Modal,
+ 
 } from 'react-native';
+import SearchScreen from '../SearchScreen/SearchScreen';
+// import Modal from 'react-native-modal'
+
 
 const Header = ({navigation}) => {
+  const [onOff, setOnOff] = useState(false);
   return (
     <SafeAreaView>
+      <Modal
+      visible={onOff}>
+        <SearchScreen 
+        setOnOff={setOnOff}
+        onOff={onOff}/>
+      
+      </Modal>
       <View style={styles.container}>
         <View>
           <TouchableOpacity onPress={()=> navigation.openDrawer() }>
             <Image
               style={{height: 30, width: 30}}
-              source={require('./src/assets/images/ui.png')}
+              source={require('../src/assets/images/ui.png')}
             />
           </TouchableOpacity>
         </View>
         <View>
         <Image
-          source={require('./src/assets/images/disneylogo.png')}
+          source={require('../src/assets/images/disneylogo.png')}
           style={styles.logo}
         />
         </View>
@@ -33,8 +46,8 @@ const Header = ({navigation}) => {
         </TouchableOpacity></View>
 
         <View >
-            <TouchableOpacity>
-            <Image style={styles.search} source={require("./src/assets/images/search.png")}/>
+            <TouchableOpacity onPress = {() => {setOnOff(true)}}>
+            <Image style={styles.search} source={require("../src/assets/images/search.png")}/>
             </TouchableOpacity>
         </View>
        
@@ -47,10 +60,11 @@ const styles = StyleSheet.create({
   container: {
       padding:2,
     flexDirection: 'row',
-    justifyContent:"space-around"
+    justifyContent:"space-around", 
+    alignItems:'center'
   },
   logo:{
-    height: 50, width: 170, bottom:18, 
+    height: 50, width: 170,bottom:5
   },
   subscribe:{
     backgroundColor:"#4072e6",height:25, padding:2, borderRadius:3, justifyContent:'center', right:15
@@ -60,6 +74,6 @@ const styles = StyleSheet.create({
 
   },
   search:{
-    height:20,width:20
+    height:20,width:20,
   }
 });

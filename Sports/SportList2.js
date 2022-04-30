@@ -1,26 +1,35 @@
-import axios from 'axios';
-import React, {useEffect, useState} from 'react';
-
-import {View, Text, Image, FlatList} from 'react-native';
+import React from 'react';
+import {
+  View,
+  StyleSheet,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
 const data = [
-  {src: require('../src/assets/images/day.jpeg')}
+  {src: require('../src/assets/images/cricket(1).jpg')},
+  {
+    src: require('../src/assets/images/football.jpg'),
+  },
+  {
+    src: require('../src/assets/images/farmula.jpg'),
+  },
+  {
+    src: require('../src/assets/images/tennis.jpg'),
+  },
+  {
+    src: require('../src/assets/images/athelits.jpg'),
+  },
 ];
 
 const PopularSport = () => {
   const renderItem = ({item}) => {
     return (
-               <View style={{backgroundColor:'black',padding:4, marginTop:15,}}>   
-            <Image source={item.src} 
-            style={{
-              width:300,
-              height:180,
-               // resizeMode:'contain',
-                borderRadius:7,
-                margin:0,
-                
-                
-            }}/>
+      <View style={styles.container}>
+        <TouchableOpacity>
+          <Image source={item.src} style={styles.image} />
+        </TouchableOpacity>
       </View>
     );
   };
@@ -31,3 +40,17 @@ const PopularSport = () => {
   );
 };
 export default PopularSport;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'black',
+    padding: 4,
+    marginTop: 10,
+  },
+  image: {
+    width: 160,
+    height: 100,
+    borderRadius: 7,
+    margin: 0,
+  },
+});

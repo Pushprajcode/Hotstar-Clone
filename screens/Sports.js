@@ -1,28 +1,58 @@
-import React from 'react'
-import{
-    View,
-    Text
+import React from 'react';
+import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
+import SportList from '../Sports/SportList1';
+import PopularSport from '../Sports/SportList2';
+import Highlights from '../Sports/SportList3';
+import Header from '../Home/header';
+import SportAdsb from '../Sports/SportAdsb';
 
-} from 'react-native'
-import HeaderSport from '../Sports/HeaderSport'
-import SportAds from '../Sports/SportAds'
-import SportList from '../Sports/SportList1'
-//import SportAdsb from '../Sports/SportAdsb'
-import PopularSport from '../Sports/SportList2'
+const Sports = ({navigation}) => {
+  return (
+    <View style={styles.container}>
+      <Header navigation={navigation} />
 
-const Sports=()=>{
-    return(
-    <View>
-        <HeaderSport/>
-        <SportAds/>
-        <SportList/>
-       <View>
-        <PopularSport/>
+      <ScrollView>
+        <SportAdsb />
+        <SportList />
+        <View style={styles.rightarrow}>
+          <Text style={styles.popular}>{'Popular Sports'}</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <Image
+              style={styles.arrow}
+              source={require('../src/assets/images/next.png')}
+            />
+          </TouchableOpacity>
         </View>
-       
-    
+        <PopularSport />
+        <View style={styles.rightarrow}>
+          <Text style={styles.popular}>{'Highlights'}</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('PopularSport')}>
+            <Image
+              style={styles.arrow}
+              source={require('../src/assets/images/next.png')}
+            />
+          </TouchableOpacity>
+        </View>
+        <Highlights />
+      </ScrollView>
     </View>
-    )
-    
-}
+  );
+};
 export default Sports;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
+  popular: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 4,
+  },
+  rightarrow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+});

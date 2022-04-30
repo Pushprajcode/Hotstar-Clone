@@ -1,23 +1,28 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
 
 const SportAdsb = () => {
   return (
     <View style={{backgroundColor: 'black'}}>
-      <Image
-        style={{
-          height: 130,
-          width: '98%',
-          marginTop: 5,
-          left: 2,
-          borderRadius: 5,
-        }}
-        source={require('../src/assets/images/ipl.jpeg')}
-      />
+      <TouchableOpacity>
+        <Image
+          style={styles.image}
+          source={require('../src/assets/images/sportads.jpg')}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
 
 export default SportAdsb;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  image: {
+    height: 130,
+    width: '98%',
+    marginTop: 5,
+    left: 2,
+    borderRadius: 5,
+    marginBottom: 5,
+  },
+});
