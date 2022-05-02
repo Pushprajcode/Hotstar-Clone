@@ -5098,6 +5098,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+modal@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/modal/-/modal-1.2.0.tgz#3da970f622dc8c640b9d0732143f800dafba8d63"
+  integrity sha1-Palw9iLcjGQLnQcyFD+ADa+6jWM=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5765,6 +5770,11 @@ react-native-codegen@^0.0.13:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-fast-image@^8.5.11:
+  version "8.5.11"
+  resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-8.5.11.tgz#e3dc969d0e4e8df026646bf18194465aa55cbc2b"
+  integrity sha512-cNW4bIJg3nvKaheG8vGMfqCt5LMWX9MS5+wMudgKIHbGO51spRr4sgnlhVgwHLcZ5aeNOVJ8CPRxDIWKRq/0QA==
+
 react-native-gesture-handler@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.4.1.tgz#f4cb1784b6dcdf41ae35b4fff6022ec21038e2cd"
@@ -5838,7 +5848,7 @@ react-native-svg@^12.3.0:
     css-select "^4.2.1"
     css-tree "^1.0.0-alpha.39"
 
-react-native@0.68.1:
+react-native@^0.68.1:
   version "0.68.1"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.68.1.tgz#c3d92f89028cdc2453fe7cd2d532b3f68d1c27c8"
   integrity sha512-5gfvslo5NO2Ece2k/q41eVOK3ca4u1QAOf+qM+auvOiUA4/QR5Yr0WfSGbRpUr2GaFgv7qP11F4+elCravg7uQ==

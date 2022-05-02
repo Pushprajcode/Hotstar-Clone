@@ -3,6 +3,7 @@ import { Image} from 'react-native';
 import Home from '../screens/Home';
 import Tv from '../screens/Tv';
 import Sports from '../screens/Sports';
+import Movie from '../screens/Movie';
 import {
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
@@ -14,7 +15,7 @@ const MyTabs = () => {
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: '#000000',
+          backgroundColor: '#000000',
           },
           tabBarLabelStyle: {
             fontFamily: 'Verdana-Italic',
@@ -29,10 +30,10 @@ const MyTabs = () => {
               <Image
                 source={
                   focused
-                    ? require('../src/assets/images/home(2).png')
-                    : require('../src/assets/images/home.png')
+                    ? require('../src/assets/images/home(1).png')
+                    : require('../src/assets/images/home(2).png')
                 }
-                style={{width: 25, height: 25}}
+                style={{width: 20, height: 20}}
               />
             ),
           }}
@@ -48,19 +49,19 @@ const MyTabs = () => {
                     ? require('../src/assets/images/livetv.png')
                     : require('../src/assets/images/tv.png')
                 }
-                style={{width: 25, height: 25}}
+                style={{width: 26, height: 26}}
               />
             ),
           }}
         />
         <Tab.Screen
-          name="Movies"
-          component={Home}
+          name="Movie"
+          component={Movie}
           options={{
             tabBarIcon: ({focused}) => (
               <Image
-                source={focused ?require('../src/assets/images/video.png'):require('../src/assets/images/videoplayer.png')}
-                style={{width: 30, height: 30}}
+                source={focused ?require('../src/assets/images/video.png'):require('../src/assets/images/video.png')}
+                style={{width: 25, height: 25}}
               />
             ),
             // tabBarLabelStyle
@@ -73,7 +74,7 @@ const MyTabs = () => {
             tabBarIcon: ({focused}) => (
               <Image
                 source={focused?require('../src/assets/images/cricket.png'):require('../src/assets/images/cricket-bat.png')}
-                style={{width: 25, height: 25}}
+                style={{width: 20, height: 20}}
               />
             ),
           }}

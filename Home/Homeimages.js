@@ -12,60 +12,77 @@ const images = [
     src: require('../src/assets/images/anupma.jpg'),
   },
   {
-    src: require('../src/assets/images/badai.jpg'),
+    src: require('../src/assets/images/atarangi.jpg'),
+    
   },
   {
     src: require('../src/assets/images/bolopencil.jpg'),
   },
   {
-    src: require('../src/assets/images/confuson.jpg'),
+    src: require('../src/assets/images/badai.jpg'),
+    
   },
   {
-    src: require('../src/assets/images/heaven.jpg'),
+    src: require('../src/assets/images/super.jpg'),
   },
   {
-    src: require('../src/assets/images/hudala.jpg'),
+    src: require('../src/assets/images/mangal.jpg'),
+    
+  },
+
+  {
+    src: require('../src/assets/images/moon.jpg'),
   },
   {
-    src: require('../src/assets/images/ifa.jpg'),
+    src: require('../src/assets/images/sundram.jpg'),
+    
   },
   {
-    src: require('../src/assets/images/judge.jpg'),
+    src: require('../src/assets/images/tanji.jpg'),
   },
   {
-    src: require('../src/assets/images/kitab.jpg'),
+    src: require('../src/assets/images/badai.jpg'),
+    
+  },
+
+  {
+    src: require('../src/assets/images/anupma.jpg'),
   },
   {
-    src: require('../src/assets/images/pencil.jpg'),
+    src: require('../src/assets/images/mangal.jpg'),
+    
   },
-  {
-    src: require('../src/assets/images/sketch.jpg'),
-  },
-  {
-    src: require('../src/assets/images/song.jpg'),
-  },
-  {
-    src: require('../src/assets/images/zid.jpg'),
-  },
-  {
-    src: require('../src/assets/images/day.jpg'),
-  },
+  
+  
+  
 ];
 
 const Homeimages =()=> {
     const renderItem=({item})=>{
         return(
             <View>
-                <Image source={item.src}/>
+                <Image
+                 style={{height:180,width:130,resizeMode:'cover',margin:5}}
+                 source={item.src}/>
 
             </View>
         )
     }
-
+   
+    return(
+    <View style={{flex:1,backgroundColor:'black'}}>
     <FlatList 
     data={images}
     renderItem={renderItem}
-    numColumns={3}/>
+    horizontal={false}
+    numColumns={3}
+    
+     
+
+   
+   />
+   </View>
+    )
 
 
 };

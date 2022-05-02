@@ -20,7 +20,7 @@ const PopularShow = () => {
       )
       .then(response => {
         console.log('response', response.data.results);
-        setdata(response.data.results.slice(12, 18));
+        setdata(response.data.results.slice(16, 20));
       })
       .catch(err => console.log('error', err));
   }, []);

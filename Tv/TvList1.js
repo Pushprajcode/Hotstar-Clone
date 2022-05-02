@@ -18,7 +18,7 @@ const TvShow = () => {
 
       .then(response => {
         console.log(response.data.results);
-        setdata(response.data.results.slice(8, 12));
+        setdata(response.data.results.slice(12,16));
       })
       .catch(err => {
         console.log('error', err);

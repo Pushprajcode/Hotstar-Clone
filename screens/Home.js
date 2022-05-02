@@ -9,7 +9,7 @@ import {
 import Header from '../Home/header';
 import Ads from './Ads';
 import Movie from '../MovieList';
-import Recomdes from '../Home/Recomdes';
+
 function Home({navigation}) {
   return (
     <View style={styles.container}>
@@ -19,12 +19,10 @@ function Home({navigation}) {
       <ScrollView bounces={false}>
         <Ads/>
         <Movie />
-        <Recomdes />
       </ScrollView>
     </View>
   );
 }
-
 export default Home;
 const styles = StyleSheet.create({
   container: {

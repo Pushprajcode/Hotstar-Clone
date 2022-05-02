@@ -18,7 +18,7 @@ const images = [
   },
 ];
 const data = [
-  {src: require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
+  {src: require('./src/assets/images/pink.jpg')},
 
   {
     src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/rudra.jpg'),
@@ -26,7 +26,7 @@ const data = [
   {
     src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/sundram.jpg'),
   },
-  {src: require('./src/assets/images/pexels-david-gomes-2752777.jpg')},
+  {src: require('./src/assets/images/atarangi.jpg')},
   {src: require('/Users/admin/Desktop/FoodDelivery/src/assets/images/world.jpg')},
  
 ];
