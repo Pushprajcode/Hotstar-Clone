@@ -20,7 +20,7 @@ const MyTabs = () => {
           tabBarLabelStyle: {
             fontFamily: 'Verdana-Italic',
           },
-          tabBarActiveTintColor: '#fff',
+          tabBarActiveTintColor: 'white',
         }}>
         <Tab.Screen
           name="Home"
@@ -30,7 +30,7 @@ const MyTabs = () => {
               <Image
                 source={
                   focused
-                    ? require('../src/assets/images/home(1).png')
+                    ? require('../src/assets/images/home(2).png')
                     : require('../src/assets/images/home(2).png')
                 }
                 style={{width: 20, height: 20}}
@@ -47,7 +47,7 @@ const MyTabs = () => {
                 source={
                   focused
                     ? require('../src/assets/images/livetv.png')
-                    : require('../src/assets/images/tv.png')
+                    : require('../src/assets/images/livetv.png')
                 }
                 style={{width: 26, height: 26}}
               />
@@ -73,7 +73,7 @@ const MyTabs = () => {
           options={{
             tabBarIcon: ({focused}) => (
               <Image
-                source={focused?require('../src/assets/images/cricket.png'):require('../src/assets/images/cricket-bat.png')}
+                source={focused?require('../src/assets/images/cricket.png'):require('../src/assets/images/cricket.png')}
                 style={{width: 20, height: 20}}
               />
             ),
